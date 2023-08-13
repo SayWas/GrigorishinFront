@@ -14,7 +14,7 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - ./nginx-front.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
       - ./data/certbot-front/conf:/etc/letsencrypt:ro
       - ./data/certbot-front/www:/var/www/certbot:ro
     depends_on:
@@ -27,5 +27,5 @@ services:
       - ./data/certbot-front/conf:/etc/letsencrypt:rw
       - ./data/certbot-front/www:/var/www/certbot:rw
     depends_on:
-      - nginx
-    command: certonly --webroot --webroot-path=/var/www/certbot --email saifulinvladislav@gmail.com --agree-tos --no-eff-email -d grigorishin.net
+      - nginx-front
+    command: certonly --webroot --webroot-path=/var/www/certbot-front --email saifulinvladislav@gmail.com --agree-tos --no-eff-email -d grigorishin.net
