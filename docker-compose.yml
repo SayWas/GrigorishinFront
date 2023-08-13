@@ -6,6 +6,8 @@ services:
         context: .
         dockerfile: Dockerfile
     container_name: grigorishinfrontend
+    volumes:
+        - grigorishinfront-app:/app
 
   nginx-front:
     image: nginx:1.24.0
@@ -15,6 +17,7 @@ services:
       - '443:443'
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - grigorishinfront-app:/app
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
       - certbot-www:/var/www/html
@@ -36,3 +39,4 @@ volumes:
     certbot-etc:
     certbot-var:
     certbot-www:
+    grigorishinfront-app:
