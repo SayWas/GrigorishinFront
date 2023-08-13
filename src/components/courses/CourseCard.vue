@@ -39,7 +39,8 @@ const props = defineProps({
         price: 0,
         starting_at: '',
         image_link: '',
-        country: {} as countrySchema
+        country: {} as countrySchema,
+        comments: []
       } as courseSchema)
   }
 })

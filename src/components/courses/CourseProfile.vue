@@ -28,12 +28,12 @@
 </template>
 
 <script setup lang="ts">
-import type { courseSchema } from '@/api/courses-api'
+import type { courseProfileSchema } from '@/api/courses-api'
 import type { PropType } from 'vue'
 
 defineProps({
   course: {
-    type: Object as PropType<courseSchema>,
+    type: Object as PropType<courseProfileSchema>,
     required: true
   }
 })

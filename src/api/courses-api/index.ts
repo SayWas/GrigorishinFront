@@ -65,4 +65,16 @@ interface courseSchema {
   comments: commentSchema[]
 }
 
-export type { courseSchema };
+interface courseProfileSchema {
+  id: number
+  title: string
+  subtitle: string
+  description: string
+  link: string
+  price: number
+  starting_at: string
+  image_link: string
+  country: countrySchema
+}
+
+export type { courseSchema, courseProfileSchema };

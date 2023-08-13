@@ -37,7 +37,7 @@ defineProps({
     default: 'Label'
   },
   modelValue: {
-    type: String,
+    type: String as () => string | boolean,
     default: ''
   },
   validationErrorMessage: String
