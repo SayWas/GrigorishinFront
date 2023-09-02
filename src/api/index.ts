@@ -2,7 +2,7 @@ import axios from 'axios'
 import router from '@/router'
 
 const loginConfig = {
-  baseURL: 'https://api.grigorishin.net',
+  baseURL: 'http://127.0.0.1:8000',
   headers: {
     'Content-Type': 'multipart/form-data'
   },
@@ -12,7 +12,7 @@ const loginConfig = {
 export const LoginAPIInstance = axios.create(loginConfig)
 
 const defaultConfig = {
-  baseURL: "https://api.grigorishin.net",
+  baseURL: "http://127.0.0.1:8000",
   headers:{
     'Content-Type': 'application/json'
   }
