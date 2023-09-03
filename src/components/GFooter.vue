@@ -3,9 +3,9 @@
     <RouterLink to="/about" class="g--footer--link">
       О сайте
     </RouterLink>
-    <RouterLink to="/policy" class="g--footer--link">
-      Политика конфиденциальности
-    </RouterLink>
+<!--    <RouterLink to="/policy" class="g&#45;&#45;footer&#45;&#45;link">-->
+<!--      Политика конфиденциальности-->
+<!--    </RouterLink>-->
   </div>
 </template>
 

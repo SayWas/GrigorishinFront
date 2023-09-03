@@ -11,6 +11,7 @@
       :starting_at="course.starting_at"
       :at-cart="atCart"
       :is-outdated="isOutdated"
+      :link="course.link"
       @add-to-cart="addToCart"
     />
   </div>

@@ -4,21 +4,14 @@
       <h3 class="g--course--available--status">
         {{ availabilityMessage }}
       </h3>
-      <em class="g--course--price">{{ price }}₽</em>
-      <button
-        v-if="userStore.currentUser === undefined || isOutdated"
-        class="g--course--pay--button g--add--to--cart--button--disabled"
-      >
-        <span>Добавить в корзину</span>
-      </button>
-      <button v-else-if="!atCart" @click="addToCart" class="g--course--pay--button">
-        <span>Добавить в корзину</span>
-      </button>
-      <RouterLink to="/cart" v-else class="g--course--pay--button g--course--in--cart">
-        <span>В корзине</span>
-      </RouterLink>
+      <a :href="link" target="_blank" v-if="isOutdated" class="g--course--pay--button">
+        <span>Посмотреть запись</span>
+      </a>
+      <a :href="link" target="_blank" v-else class="g--course--pay--button g--course--in--cart">
+        <span>Присоединиться к семинару</span>
+      </a>
       <span class="g--course--email--info"
-        >Если у Вас есть причины просить о скидке, пишите по адресу: gmail@gmail.com</span
+        >Если у Вас есть вопросы или хотите оставить отзыв, пишите по адресу: gmail@gmail.com</span
       >
     </aside>
   </div>
@@ -44,12 +37,16 @@ const props = defineProps({
   isOutdated: {
     type: Boolean,
     required: true
+  },
+  link: {
+    type: String,
+    required: true
   }
 })
 const availabilityMessage = computed(() => {
   return Date.parse(props.starting_at) > Date.now()
-    ? 'Запись на курс открыта'
-    : 'Запись на курс закрыта'
+    ? 'Семинар ещё не начался'
+    : 'Семинар уже прошел'
 })
 
 const userStore = useUserStore()

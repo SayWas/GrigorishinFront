@@ -1,10 +1,10 @@
 <template>
   <header class="g--header">
     <RouterLink to="/" class="g--text g--title">GRIGORISHIN</RouterLink>
-    <div v-if="userStore.currentUser === undefined" class="g--authorize">
-      <RouterLink to="/register" class="g--button g--register g--text"> Регистрация</RouterLink>
-      <RouterLink to="/login" class="g--button g--underline--button g--text"> Войти</RouterLink>
-    </div>
+    <!--    <div v-if="userStore.currentUser === undefined" class="g&#45;&#45;authorize">-->
+    <!--      <RouterLink to="/register" class="g&#45;&#45;button g&#45;&#45;register g&#45;&#45;text"> Регистрация</RouterLink>-->
+    <!--      <RouterLink to="/login" class="g&#45;&#45;button g&#45;&#45;underline&#45;&#45;button g&#45;&#45;text"> Войти</RouterLink>-->
+    <!--    </div>-->
     <div v-if="userStore.currentUser !== undefined" class="g--header--actions">
       <RouterLink to="/cart" class="g--header--cart">
         <CartIcon class="g--header--cart--icon" />

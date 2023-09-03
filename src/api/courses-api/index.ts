@@ -58,6 +58,7 @@ interface courseSchema {
   title: string
   subtitle: string
   description: string
+  link: string
   price: number
   starting_at: string
   image_link: string
