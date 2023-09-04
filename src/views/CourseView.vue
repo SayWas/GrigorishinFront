@@ -68,6 +68,7 @@ let course: Ref<UnwrapRef<courseSchema>> = ref({
   title: '',
   subtitle: '',
   description: '',
+  link: '',
   price: 0,
   starting_at: '',
   image_link: '',
