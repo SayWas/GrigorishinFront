@@ -14,7 +14,6 @@ services:
     container_name: nginx-front
     ports:
       - '80:80'
-      - '443:443'
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - grigorishinfront-app:/app
