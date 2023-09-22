@@ -14,6 +14,7 @@ services:
 
 volumes:
     grigorishinfront-app:
+      external: true
 
 networks:
   grigorishinfront:
